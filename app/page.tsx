@@ -205,7 +205,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-8 font-[family-name:var(--font-playfair)]">
-               About Mendoza Strong Junk Removal LLC
+               About Mendoza Strong 💪🏽 junk removal LLC
+
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center">
