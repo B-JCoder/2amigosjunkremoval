@@ -64,7 +64,7 @@ export default function HomePage() {
             <div className="flex items-center space-x-2 sm:space-x-4">
               <Image
                 src="/images/logo-2amigos.png"
-                alt="2 Amigos Junk Removal"
+                alt="Mendoza Strong 💪🏽 junk removal LLC"
                 width={100}
                 height={50}
                 className="rounded-lg sm:w-[160px] sm:h-[60px]"
@@ -153,41 +153,51 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <Badge className="mb-4 sm:mb-6 bg-accent text-accent-foreground text-sm red-shadow font-semibold">
-              Junk In, Junk Out!
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-[family-name:var(--font-playfair)] text-balance leading-tight">
-              Professional Junk Removal in San Antonio
-            </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 text-pretty max-w-2xl mx-auto px-2">
-              Fast, reliable, and affordable junk removal services. Serving Converse, Selma, and surrounding areas with
-              free estimates and same-day service.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-              <Button onClick={scrollToContact} size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
-                Get Free Estimate
-              </Button>
-              <Button onClick={handleCall} size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
-                <Phone className="w-5 h-5 mr-2" />
-                <span className="hidden sm:inline">Call Now: </span>(210) 445-5274
-              </Button>
-            </div>
-            <div className="mb-8 px-4">
-              <Image
-                src="/images/special-offer.png"
-                alt="Special Offer - Free Estimates"
-                width={800}
-                height={400}
-                className="mx-auto rounded-lg red-shadow-lg w-full max-w-3xl h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+<section className="py-12 sm:py-16 lg:py-20 relative">
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5"></div>
+  <div className="container mx-auto px-4 text-center relative z-10">
+    <div className="max-w-4xl mx-auto">
+      <Badge className="mb-4 sm:mb-6 bg-accent text-accent-foreground text-sm red-shadow font-semibold">
+        Junk In, Junk Out!
+      </Badge>
+
+      {/* New headline */}
+      <p className="text-lg sm:text-xl font-semibold text-primary mb-2">
+        Family Owned &amp; Operated
+      </p>
+
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-[family-name:var(--font-playfair)] text-balance leading-tight">
+        Professional Junk Removal in San Antonio
+      </h1>
+
+      <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 text-pretty max-w-2xl mx-auto px-2">
+        Fast, reliable, and affordable junk removal services. Serving Converse, Selma, and surrounding areas with
+        free estimates and same-day service.
+      </p>
+
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
+        <Button onClick={scrollToContact} size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
+          Get Free Estimate
+        </Button>
+        <Button onClick={handleCall} size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
+          <Phone className="w-5 h-5 mr-2" />
+          <span className="hidden sm:inline">Call Now: </span>(210) 445-5274
+        </Button>
+      </div>
+
+      <div className="mb-8 px-4">
+        <Image
+          src="/images/special-offer.png"
+          alt="Special Offer - Free Estimates"
+          width={800}
+          height={400}
+          className="mx-auto rounded-lg red-shadow-lg w-full max-w-3xl h-auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* About Section */}
       <section id="about" className="py-12 sm:py-16 lg:py-20 relative">
@@ -195,7 +205,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-8 font-[family-name:var(--font-playfair)]">
-              About 2 Amigos Junk Removal
+               About Mendoza Strong Junk Removal LLC
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center">
@@ -629,13 +639,13 @@ export default function HomePage() {
               <div className="flex items-center space-x-3 mb-4">
                 <Image
                   src="/images/logo-2amigos.png"
-                  alt="2 Amigos Junk Removal"
+                  alt="Mendoza Strong 💪🏽 junk removal LLC"
                   width={40}
                   height={40}
                   className="rounded"
                 />
                 <h3 className="text-lg sm:text-xl font-bold font-[family-name:var(--font-playfair)]">
-                  2 Amigos Junk Removal
+                  Mendoza Strong 💪🏽 junk removal LLC
                 </h3>
               </div>
               <p className="text-sm text-secondary-foreground/80">
@@ -671,7 +681,7 @@ export default function HomePage() {
           </div>
           <div className="border-t border-secondary-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="text-xs sm:text-sm text-secondary-foreground/60">
-              © 2025 2 Amigos Junk Removal. All rights reserved. Licensed and insured in Texas.
+              © 2025 Mendoza Strong 💪🏽 junk removal LLC. All rights reserved. Licensed and insured in Texas.
             </p>
           </div>
         </div>

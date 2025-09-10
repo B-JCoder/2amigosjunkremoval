@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "2 Amigos Junk Removal - San Antonio TX | Free Estimates",
+  title: "Mendoza Strong 💪🏽 junk removal LLC - San Antonio TX | Free Estimates",
   description:
     "Professional junk removal services in San Antonio, Converse, and Selma TX. Valet trash, small moves, cleanouts, and appliance removal. Call (210) 445-5274 for free estimates!",
   generator: "v0.app",
