@@ -185,15 +185,7 @@ export default function HomePage() {
         </Button>
       </div>
 
-      <div className="mb-8 px-4">
-        <Image
-          src="/images/special-offer.png"
-          alt="Special Offer - Free Estimates"
-          width={800}
-          height={400}
-          className="mx-auto rounded-lg red-shadow-lg w-full max-w-3xl h-auto"
-        />
-      </div>
+ 
     </div>
   </div>
 </section>
