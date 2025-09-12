@@ -66,8 +66,8 @@ export default function HomePage() {
                 src="/images/logo.png"
                 alt="Mendoza Strong 💪🏽 junk removal LLC"
                 width={70}
-                height={50}
-                className="rounded-lg sm:w-[120px] sm:h-[60px]"
+                height={80}
+                className="rounded-lg sm:w-[100px] sm:h-[80px]"
               />
               <div>
              
