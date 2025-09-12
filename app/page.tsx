@@ -1,13 +1,13 @@
 "use client"
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Badge } from "@/components/ui/badge"
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Badge } from "@/components/ui/badge";
 import {
   Phone,
   Mail,
@@ -22,7 +22,7 @@ import {
   Shield,
   Menu,
   X,
-} from "lucide-react"
+} from "lucide-react";
 
 export default function HomePage() {
   const [formData, setFormData] = useState({
@@ -30,30 +30,30 @@ export default function HomePage() {
     email: "",
     phone: "",
     message: "",
-  })
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-    setMobileMenuOpen(false)
-  }
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
 
   const handleCall = () => {
-    window.location.href = "tel:2104455274"
-  }
+    window.location.href = "tel:2104455274";
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-    alert("Thank you! We'll contact you soon for your free estimate.")
-    setFormData({ name: "", email: "", phone: "", message: "" })
-  }
+    console.log("Form submitted:", formData);
+    alert("Thank you! We'll contact you soon for your free estimate.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
 
   const handleNavClick = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" })
-    setMobileMenuOpen(false)
-  }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -69,25 +69,38 @@ export default function HomePage() {
                 height={80}
                 className="rounded-lg sm:w-[100px] sm:h-[80px]"
               />
-              <div>
-             
-              </div>
+              <div></div>
             </div>
 
             <nav className="hidden lg:flex items-center space-x-6">
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#about"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 About
               </a>
-              <a href="#services" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#services"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Services
               </a>
-              <a href="#gallery" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#gallery"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Gallery
               </a>
-              <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#pricing"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Pricing
               </a>
-              <a href="#testimonials" className="text-foreground hover:text-primary transition-colors">
+              <a
+                href="#testimonials"
+                className="text-foreground hover:text-primary transition-colors"
+              >
                 Reviews
               </a>
               <Button onClick={handleCall} variant="outline" size="sm">
@@ -97,15 +110,34 @@ export default function HomePage() {
             </nav>
 
             <div className="flex items-center space-x-2 lg:hidden">
-              <Button onClick={handleCall} variant="outline" size="sm" className="hidden sm:flex bg-transparent">
+              <Button
+                onClick={handleCall}
+                variant="outline"
+                size="sm"
+                className="hidden sm:flex bg-transparent"
+              >
                 <Phone className="w-4 h-4 mr-1" />
                 Call
               </Button>
-              <Button onClick={handleCall} variant="outline" size="sm" className="sm:hidden p-2 bg-transparent">
+              <Button
+                onClick={handleCall}
+                variant="outline"
+                size="sm"
+                className="sm:hidden p-2 bg-transparent"
+              >
                 <Phone className="w-4 h-4" />
               </Button>
-              <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
-                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2"
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </Button>
             </div>
           </div>
@@ -151,92 +183,264 @@ export default function HomePage() {
           )}
         </div>
       </header>
-
       {/* Hero Section */}
-<section className="py-12 sm:py-16 lg:py-20 relative">
-  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5"></div>
-  <div className="container mx-auto px-4 text-center relative z-10">
-    <div className="max-w-4xl mx-auto">
-      <Badge className="mb-4 sm:mb-6 bg-accent text-accent-foreground text-sm red-shadow font-semibold">
-        Junk In, Junk Out!
-      </Badge>
+      <section className="py-12 sm:py-16 lg:py-20 relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/5"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <Badge className="mb-4 sm:mb-6 bg-accent text-accent-foreground text-sm red-shadow font-semibold">
+              Junk In, Junk Out!
+            </Badge>
 
-      {/* New headline */}
-      <p className="text-lg sm:text-xl font-semibold text-primary mb-2">
-        Family Owned &amp; Operated
-      </p>
+            {/* New headline */}
+            <p className="text-lg sm:text-xl font-semibold text-primary mb-2">
+              Family Owned &amp; Operated
+            </p>
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-[family-name:var(--font-playfair)] text-balance leading-tight">
-        Professional Junk Removal in San Antonio
-      </h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-[family-name:var(--font-playfair)] text-balance leading-tight">
+              Professional Junk Removal in San Antonio
+            </h1>
 
-      <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 text-pretty max-w-2xl mx-auto px-2">
-        Fast, reliable, and affordable junk removal services. Serving Converse, Selma, and surrounding areas with
-        free estimates and same-day service.
-      </p>
+            <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8 text-pretty max-w-2xl mx-auto px-2">
+              Fast, reliable, and affordable junk removal services. Serving
+              Converse, Selma, and surrounding areas with free estimates and
+              same-day service.
+            </p>
 
-      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-        <Button onClick={scrollToContact} size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
-          Get Free Estimate
-        </Button>
-        <Button onClick={handleCall} size="lg" variant="outline" className="w-full sm:w-auto bg-transparent">
-          <Phone className="w-5 h-5 mr-2" />
-          <span className="hidden sm:inline">Call Now: </span>(210) 445-5274
-        </Button>
-      </div>
-
- 
-    </div>
-  </div>
-</section>
-
-
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
+              <Button
+                onClick={scrollToContact}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 w-full sm:w-auto"
+              >
+                Get Free Estimate
+              </Button>
+              <Button
+                onClick={handleCall}
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto bg-transparent"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                <span className="hidden sm:inline">Call Now: </span>(210)
+                445-5274
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* About Section */}
       <section id="about" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 glass-subtle"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6 sm:mb-8 font-[family-name:var(--font-playfair)]">
-               About Mendoza Strong 💪🏽 junk removal LLC
-
+              About Mendoza Strong 💪🏽 junk removal LLC
             </h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="text-center">
                 <Shield className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">Licensed & Insured</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Licensed & Insured
+                </h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Fully licensed and insured for your peace of mind
                 </p>
               </div>
               <div className="text-center">
                 <Clock className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">Same-Day Service</h3>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Same-Day Service
+                </h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Quick response times and flexible scheduling
                 </p>
               </div>
               <div className="text-center sm:col-span-2 md:col-span-1">
                 <CheckCircle className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold mb-2">Eco-Friendly</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">We recycle and donate whenever possible</p>
+                <h3 className="text-lg sm:text-xl font-semibold mb-2">
+                  Eco-Friendly
+                </h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  We recycle and donate whenever possible
+                </p>
               </div>
             </div>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 text-pretty px-2">
-              We are your trusted local junk removal experts serving San Antonio, Converse, and Selma. Our professional
-              team provides reliable, efficient, and eco-friendly junk removal services for residential and commercial
-              properties. From single items to complete cleanouts, we handle it all with care and professionalism.
+              We are your trusted local junk removal experts serving San
+              Antonio, Converse, and Selma. Our professional team provides
+              reliable, efficient, and eco-friendly junk removal services for
+              residential and commercial properties. From single items to
+              complete cleanouts, we handle it all with care and
+              professionalism.
             </p>
-            <Button onClick={scrollToContact} size="lg" className="w-full sm:w-auto">
+            <Button
+              onClick={scrollToContact}
+              size="lg"
+              className="w-full sm:w-auto"
+            >
               Schedule Your Free Estimate
             </Button>
           </div>
+           <div className="mt-20 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl shadow-lg p-8 text-center">
+      <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">
+        Now Offering
+      </h3>
+      <ul className="space-y-3 text-lg sm:text-xl text-foreground font-medium">
+        <li>Valet Trash Services</li>
+        <li>Small Move Services</li>
+        <li>
+          Clean Out Services{" "}
+          <span className="block text-sm text-muted-foreground">
+            Estates • Evictions • Sheds • Storage Units • Garages
+          </span>
+        </li>
+        <li>
+          Removal Services{" "}
+          <span className="block text-sm text-muted-foreground">
+            Appliances • Furniture • Unwanted junk
+          </span>
+        </li>
+      </ul>
+
+      {/* Free Estimates Badge */}
+      <div className="mt-8 inline-block px-8 py-4 rounded-xl bg-primary text-white font-bold text-lg shadow-md tracking-wide">
+        FREE ESTIMATES
+      </div>
+    </div>
         </div>
       </section>
-
       {/* Services Section */}
-    <section id="services" className="py-12 sm:py-16 lg:py-20 relative"> <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div> <div className="container mx-auto px-4 relative z-10"> <div className="text-center mb-12 sm:mb-16"> <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]"> Our Services </h2> <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2"> Comprehensive junk removal solutions for all your needs </p> </div> <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"> <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6"> <div className="pb-4"> <Truck className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" /> <h3 className="text-lg sm:text-xl font-semibold text-foreground">Valet Trash Services</h3> </div> <div> <p className="mb-4 text-sm sm:text-base text-muted-foreground"> Convenient curbside pickup for residential and commercial properties </p> <Button onClick={scrollToContact} variant="outline" size="sm" className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent" > Get Quote </Button> </div> </div> <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6"> <div className="pb-4"> <Home className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" /> <h3 className="text-lg sm:text-xl font-semibold text-foreground">Small Move Services</h3> </div> <div> <p className="mb-4 text-sm sm:text-base text-muted-foreground"> Efficient moving services for apartments, condos, and small homes </p> <Button onClick={scrollToContact} variant="outline" size="sm" className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent" > Get Quote </Button> </div> </div> <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6"> <div className="pb-4"> <Building className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" /> <h3 className="text-lg sm:text-xl font-semibold text-foreground">Cleanout Services</h3> </div> <div> <p className="mb-4 text-sm sm:text-base text-muted-foreground"> Complete cleanouts for estates, evictions, sheds, and garages </p> <Button onClick={scrollToContact} variant="outline" size="sm" className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent" > Get Quote </Button> </div> </div> <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6"> <div className="pb-4"> <Trash2 className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" /> <h3 className="text-lg sm:text-xl font-semibold text-foreground">Removal Services</h3> </div> <div> <p className="mb-4 text-sm sm:text-base text-muted-foreground"> Appliances, furniture, and unwanted junk removal </p> <Button onClick={scrollToContact} variant="outline" size="sm" className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent" > Get Quote </Button> </div> </div> </div> </div> </section> Now Offering Valet Trash Services Small Move Services Clean Out Services Estates • Evictions • Sheds • Storage Units • Garages Removal Services Appliances • Furniture • Unwanted junk FREE ESTIMATES
-
-
+      <section id="services" className="py-12 sm:py-16 lg:py-20 relative">
+        {" "}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>{" "}
+        <div className="container mx-auto px-4 relative z-10">
+          {" "}
+          <div className="text-center mb-12 sm:mb-16">
+            {" "}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
+              {" "}
+              Our Services{" "}
+            </h2>{" "}
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+              {" "}
+              Comprehensive junk removal solutions for all your needs{" "}
+            </p>{" "}
+          </div>{" "}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {" "}
+            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
+              {" "}
+              <div className="pb-4">
+                {" "}
+                <Truck className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />{" "}
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">
+                  Valet Trash Services
+                </h3>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+                  {" "}
+                  Convenient curbside pickup for residential and commercial
+                  properties{" "}
+                </p>{" "}
+                <Button
+                  onClick={scrollToContact}
+                  variant="outline"
+                  size="sm"
+                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
+                >
+                  {" "}
+                  Get Quote{" "}
+                </Button>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
+              {" "}
+              <div className="pb-4">
+                {" "}
+                <Home className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />{" "}
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">
+                  Small Move Services
+                </h3>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+                  {" "}
+                  Efficient moving services for apartments, condos, and small
+                  homes{" "}
+                </p>{" "}
+                <Button
+                  onClick={scrollToContact}
+                  variant="outline"
+                  size="sm"
+                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
+                >
+                  {" "}
+                  Get Quote{" "}
+                </Button>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
+              {" "}
+              <div className="pb-4">
+                {" "}
+                <Building className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />{" "}
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">
+                  Cleanout Services
+                </h3>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+                  {" "}
+                  Complete cleanouts for estates, evictions, sheds, and garages{" "}
+                </p>{" "}
+                <Button
+                  onClick={scrollToContact}
+                  variant="outline"
+                  size="sm"
+                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
+                >
+                  {" "}
+                  Get Quote{" "}
+                </Button>{" "}
+              </div>{" "}
+            </div>{" "}
+            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
+              {" "}
+              <div className="pb-4">
+                {" "}
+                <Trash2 className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />{" "}
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">
+                  Removal Services
+                </h3>{" "}
+              </div>{" "}
+              <div>
+                {" "}
+                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+                  {" "}
+                  Appliances, furniture, and unwanted junk removal{" "}
+                </p>{" "}
+                <Button
+                  onClick={scrollToContact}
+                  variant="outline"
+                  size="sm"
+                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
+                >
+                  {" "}
+                  Get Quote{" "}
+                </Button>{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
+      </section>{" "}
+      Now Offering Valet Trash Services Small Move Services Clean Out Services
+      Estates • Evictions • Sheds • Storage Units • Garages Removal Services
+      Appliances • Furniture • Unwanted junk FREE ESTIMATES
       {/* Photo Gallery */}
       <section id="gallery" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 glass-subtle"></div>
@@ -245,7 +449,9 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
               Our Work Gallery
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground">See the quality of our junk removal services</p>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              See the quality of our junk removal services
+            </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -261,14 +467,15 @@ export default function HomePage() {
                   className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 glass opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <p className="text-foreground font-semibold text-sm sm:text-base">Professional Cleanup</p>
+                  <p className="text-foreground font-semibold text-sm sm:text-base">
+                    Professional Cleanup
+                  </p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section id="pricing" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-primary/5"></div>
@@ -277,7 +484,9 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
               Transparent Pricing
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground">No hidden fees - just honest, upfront pricing</p>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              No hidden fees - just honest, upfront pricing
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg">
@@ -285,8 +494,12 @@ export default function HomePage() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-2">
                   Basic
                 </h3>
-                <p className="text-muted-foreground mb-4">Perfect for small cleanups</p>
-                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">$99+</div>
+                <p className="text-muted-foreground mb-4">
+                  Perfect for small cleanups
+                </p>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">
+                  $99+
+                </div>
               </div>
               <div className="p-6 pt-0">
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
@@ -303,12 +516,18 @@ export default function HomePage() {
 
             <div className="glass-strong text-center transition-all duration-300 red-shadow-lg border-primary/50 rounded-lg">
               <div className="p-6">
-                <Badge className="mb-2 bg-primary text-primary-foreground red-shadow">Most Popular</Badge>
+                <Badge className="mb-2 bg-primary text-primary-foreground red-shadow">
+                  Most Popular
+                </Badge>
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-2">
                   Standard
                 </h3>
-                <p className="text-muted-foreground mb-4">Great for home cleanouts</p>
-                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">$199+</div>
+                <p className="text-muted-foreground mb-4">
+                  Great for home cleanouts
+                </p>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">
+                  $199+
+                </div>
               </div>
               <div className="p-6 pt-0">
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
@@ -328,8 +547,12 @@ export default function HomePage() {
                 <h3 className="text-xl sm:text-2xl font-bold text-foreground font-[family-name:var(--font-playfair)] mb-2">
                   Premium
                 </h3>
-                <p className="text-muted-foreground mb-4">Complete property cleanouts</p>
-                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">$399+</div>
+                <p className="text-muted-foreground mb-4">
+                  Complete property cleanouts
+                </p>
+                <div className="text-2xl sm:text-3xl font-bold text-primary mt-4">
+                  $399+
+                </div>
               </div>
               <div className="p-6 pt-0">
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
@@ -346,7 +569,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section id="testimonials" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 glass-subtle"></div>
@@ -355,7 +577,9 @@ export default function HomePage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
               What Our Customers Say
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground">Don't just take our word for it</p>
+            <p className="text-base sm:text-lg text-muted-foreground">
+              Don't just take our word for it
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
             <div className="glass hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg">
@@ -365,13 +589,18 @@ export default function HomePage() {
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-foreground">Maria Rodriguez</h3>
-                <p className="text-sm text-muted-foreground mb-4">Converse, TX</p>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                  Maria Rodriguez
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Converse, TX
+                </p>
               </div>
               <div className="p-6 pt-0">
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  "Excellent service! They arrived on time, worked efficiently, and cleaned up everything perfectly. The
-                  pricing was very fair and transparent. Highly recommend!"
+                  "Excellent service! They arrived on time, worked efficiently,
+                  and cleaned up everything perfectly. The pricing was very fair
+                  and transparent. Highly recommend!"
                 </p>
               </div>
             </div>
@@ -383,13 +612,18 @@ export default function HomePage() {
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-foreground">James Thompson</h3>
-                <p className="text-sm text-muted-foreground mb-4">San Antonio, TX</p>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                  James Thompson
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  San Antonio, TX
+                </p>
               </div>
               <div className="p-6 pt-0">
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  "Professional team that handled our estate cleanout with care and respect. They even donated items
-                  that were still in good condition. Great service!"
+                  "Professional team that handled our estate cleanout with care
+                  and respect. They even donated items that were still in good
+                  condition. Great service!"
                 </p>
               </div>
             </div>
@@ -401,20 +635,22 @@ export default function HomePage() {
                     <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                   ))}
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-foreground">Sarah Johnson</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                  Sarah Johnson
+                </h3>
                 <p className="text-sm text-muted-foreground mb-4">Selma, TX</p>
               </div>
               <div className="p-6 pt-0">
                 <p className="text-sm sm:text-base text-muted-foreground">
-                  "Quick response and same-day service! They removed our old appliances and furniture without any
-                  hassle. Will definitely use them again."
+                  "Quick response and same-day service! They removed our old
+                  appliances and furniture without any hassle. Will definitely
+                  use them again."
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section id="contact" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-accent/5"></div>
@@ -425,7 +661,8 @@ export default function HomePage() {
                 Get Your Free Estimate
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground px-2">
-                Ready to get rid of your junk? Contact us today for a free, no-obligation estimate.
+                Ready to get rid of your junk? Contact us today for a free,
+                no-obligation estimate.
               </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
@@ -462,12 +699,18 @@ export default function HomePage() {
                     <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold">Service Areas</p>
-                      <p className="text-muted-foreground text-sm sm:text-base">San Antonio, Converse, Selma, TX</p>
+                      <p className="text-muted-foreground text-sm sm:text-base">
+                        San Antonio, Converse, Selma, TX
+                      </p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-6 sm:mt-8">
-                  <Button onClick={handleCall} size="lg" className="w-full lg:w-auto red-shadow">
+                  <Button
+                    onClick={handleCall}
+                    size="lg"
+                    className="w-full lg:w-auto red-shadow"
+                  >
                     <Phone className="w-5 h-5 mr-2" />
                     Call Now for Immediate Service
                   </Button>
@@ -475,7 +718,9 @@ export default function HomePage() {
               </div>
               <div className="glass red-shadow-lg rounded-lg">
                 <div className="p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">Request Free Estimate</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-2">
+                    Request Free Estimate
+                  </h3>
                   <p className="text-sm sm:text-base text-muted-foreground mb-6">
                     Fill out the form and we'll get back to you within 24 hours
                   </p>
@@ -486,7 +731,9 @@ export default function HomePage() {
                       <Input
                         placeholder="Your Name"
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                         required
                         className="text-base glass border-border/50 text-foreground placeholder:text-muted-foreground"
                       />
@@ -496,7 +743,9 @@ export default function HomePage() {
                         type="email"
                         placeholder="Email Address"
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         required
                         className="text-base glass border-border/50 text-foreground placeholder:text-muted-foreground"
                       />
@@ -506,7 +755,9 @@ export default function HomePage() {
                         type="tel"
                         placeholder="Phone Number"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
                         required
                         className="text-base glass border-border/50 text-foreground placeholder:text-muted-foreground"
                       />
@@ -515,13 +766,19 @@ export default function HomePage() {
                       <Textarea
                         placeholder="Describe what you need removed..."
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, message: e.target.value })
+                        }
                         rows={4}
                         required
                         className="text-base resize-none glass border-border/50 text-foreground placeholder:text-muted-foreground"
                       />
                     </div>
-                    <Button type="submit" className="w-full red-shadow" size="lg">
+                    <Button
+                      type="submit"
+                      className="w-full red-shadow"
+                      size="lg"
+                    >
                       Get My Free Estimate
                     </Button>
                   </form>
@@ -531,7 +788,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="glass-strong border-t border-border/50 py-8 sm:py-12">
         <div className="container mx-auto px-4">
@@ -550,7 +806,8 @@ export default function HomePage() {
                 </h3>
               </div>
               <p className="text-sm text-secondary-foreground/80">
-                Professional junk removal services in San Antonio, TX. Licensed, insured, and eco-friendly.
+                Professional junk removal services in San Antonio, TX. Licensed,
+                insured, and eco-friendly.
               </p>
             </div>
             <div>
@@ -582,11 +839,12 @@ export default function HomePage() {
           </div>
           <div className="border-t border-secondary-foreground/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
             <p className="text-xs sm:text-sm text-secondary-foreground/60">
-              © 2025 Mendoza Strong 💪🏽 junk removal LLC. All rights reserved. Licensed and insured in Texas.
+              © 2025 Mendoza Strong 💪🏽 junk removal LLC. All rights reserved.
+              Licensed and insured in Texas.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
