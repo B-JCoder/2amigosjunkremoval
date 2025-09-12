@@ -67,7 +67,7 @@ export default function HomePage() {
                 alt="Mendoza Strong 💪🏽 junk removal LLC"
                 width={70}
                 height={50}
-                className="rounded-lg sm:w-[160px] sm:h-[60px]"
+                className="rounded-lg sm:w-[120px] sm:h-[60px]"
               />
               <div>
              
