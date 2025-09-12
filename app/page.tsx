@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-4">
               <Image
-                src="/images/logo-2amigos.png"
+                src="/publicimagesnewlogo.png"
                 alt="Mendoza Strong 💪🏽 junk removal LLC"
                 width={100}
                 height={50}
@@ -639,7 +639,7 @@ export default function HomePage() {
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <Image
-                  src="/images/logo-2amigos.png"
+                  src="/publicimagesnewlogo.png"
                   alt="Mendoza Strong 💪🏽 junk removal LLC"
                   width={40}
                   height={40}
