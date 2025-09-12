@@ -234,100 +234,80 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 sm:py-16 lg:py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
-              Our Services
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
-              Comprehensive junk removal solutions for all your needs
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
-              <div className="pb-4">
-                <Truck className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Valet Trash Services</h3>
-              </div>
-              <div>
-                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
-                  Convenient curbside pickup for residential and commercial properties
-                </p>
-                <Button
-                  onClick={scrollToContact}
-                  variant="outline"
-                  size="sm"
-                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
-                >
-                  Get Quote
-                </Button>
-              </div>
-            </div>
+      <section
+  id="services"
+  className="py-12 sm:py-16 lg:py-20 relative"
+>
+  <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-accent/5"></div>
+  <div className="container mx-auto px-4 relative z-10">
+    {/* Section Heading */}
+    <div className="text-center mb-12 sm:mb-16">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 font-[family-name:var(--font-playfair)]">
+        Our Services
+      </h2>
+      <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+        Comprehensive junk removal solutions for all your needs
+      </p>
+    </div>
 
-            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
-              <div className="pb-4">
-                <Home className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Small Move Services</h3>
-              </div>
-              <div>
-                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
-                  Efficient moving services for apartments, condos, and small homes
-                </p>
-                <Button
-                  onClick={scrollToContact}
-                  variant="outline"
-                  size="sm"
-                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
-                >
-                  Get Quote
-                </Button>
-              </div>
-            </div>
-
-            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
-              <div className="pb-4">
-                <Building className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Cleanout Services</h3>
-              </div>
-              <div>
-                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
-                  Complete cleanouts for estates, evictions, sheds, and garages
-                </p>
-                <Button
-                  onClick={scrollToContact}
-                  variant="outline"
-                  size="sm"
-                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
-                >
-                  Get Quote
-                </Button>
-              </div>
-            </div>
-
-            <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
-              <div className="pb-4">
-                <Trash2 className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Removal Services</h3>
-              </div>
-              <div>
-                <p className="mb-4 text-sm sm:text-base text-muted-foreground">
-                  Appliances, furniture, and unwanted junk removal
-                </p>
-                <Button
-                  onClick={scrollToContact}
-                  variant="outline"
-                  size="sm"
-                  className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
-                >
-                  Get Quote
-                </Button>
-              </div>
-            </div>
-          </div>
+    {/* Services Grid */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      {/* Service Card Example */}
+      <div className="glass text-center hover:glass-strong transition-all duration-300 red-shadow hover:red-shadow-lg rounded-lg p-6">
+        <div className="pb-4">
+          <Truck className="w-10 sm:w-12 h-10 sm:h-12 text-primary mx-auto mb-3 sm:mb-4" />
+          <h3 className="text-lg sm:text-xl font-semibold text-foreground">
+            Valet Trash Services
+          </h3>
         </div>
-      </section>
+        <div>
+          <p className="mb-4 text-sm sm:text-base text-muted-foreground">
+            Convenient curbside pickup for residential and commercial properties
+          </p>
+          <Button
+            onClick={scrollToContact}
+            variant="outline"
+            size="sm"
+            className="w-full sm:w-auto glass border-primary/50 hover:bg-primary/20 text-foreground bg-transparent"
+          >
+            Get Quote
+          </Button>
+        </div>
+      </div>
+
+      {/* Repeat other 3 service cards here... */}
+    </div>
+
+    {/* Now Offering Section */}
+    <div className="mt-16 text-center">
+      <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
+        Now Offering
+      </h3>
+      <ul className="space-y-2 text-muted-foreground text-base sm:text-lg">
+        <li>Valet Trash Services</li>
+        <li>Small Move Services</li>
+        <li>
+          Clean Out Services{" "}
+          <span className="block text-sm text-muted-foreground">
+            Estates • Evictions • Sheds • Storage Units • Garages
+          </span>
+        </li>
+        <li>
+          Removal Services{" "}
+          <span className="block text-sm text-muted-foreground">
+            Appliances • Furniture • Unwanted junk
+          </span>
+        </li>
+      </ul>
+
+      {/* Free Estimates Highlight */}
+      <div className="mt-6 inline-block px-6 py-3 rounded-lg bg-primary text-white font-semibold shadow-lg">
+        FREE ESTIMATES
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Photo Gallery */}
       <section id="gallery" className="py-12 sm:py-16 lg:py-20 relative">
