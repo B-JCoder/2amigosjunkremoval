@@ -65,7 +65,7 @@ export default function HomePage() {
               <Image
                 src="/images/logo.png"
                 alt="Mendoza Strong 💪🏽 junk removal LLC"
-                width={100}
+                width={70}
                 height={50}
                 className="rounded-lg sm:w-[160px] sm:h-[60px]"
               />
@@ -639,7 +639,7 @@ export default function HomePage() {
             <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <Image
-                  src="/publicimagesnewlogo.png"
+                  src="/images/logo.png"
                   alt="Mendoza Strong 💪🏽 junk removal LLC"
                   width={40}
                   height={40}
