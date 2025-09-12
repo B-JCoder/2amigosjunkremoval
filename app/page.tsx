@@ -438,9 +438,7 @@ export default function HomePage() {
           </div>{" "}
         </div>{" "}
       </section>{" "}
-      Now Offering Valet Trash Services Small Move Services Clean Out Services
-      Estates • Evictions • Sheds • Storage Units • Garages Removal Services
-      Appliances • Furniture • Unwanted junk FREE ESTIMATES
+     
       {/* Photo Gallery */}
       <section id="gallery" className="py-12 sm:py-16 lg:py-20 relative">
         <div className="absolute inset-0 glass-subtle"></div>
