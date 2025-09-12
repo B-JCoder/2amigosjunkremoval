@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-4">
               <Image
-                src="/publicimagesnewlogo.png"
+                src="/public/images/newlogo.png"
                 alt="Mendoza Strong 💪🏽 junk removal LLC"
                 width={100}
                 height={50}
